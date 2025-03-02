@@ -7,11 +7,16 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: sans-serif;
+}
 
  @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&display=swap");
 
 @theme{
-  --font-heading: Michroma, sans-serif
+  --font-heading: Michroma, sans-serif;
+  --color-primary:#161647
+
 }
 
 
