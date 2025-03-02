@@ -1,7 +1,37 @@
 @import "tailwindcss";
-/* :root {
-    --primary-9: #161647; 
-    --secondary:#fff;
-    /* Custom Primary Color */
- /* Darker Shade */
+
+
+ body,html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&display=swap");
+
+@theme{
+  --font-heading: Michroma, sans-serif
+}
+
+
+
+
+
+ @layer components {
+    .btn {
+      @apply bg-[#161647] text-white h-[40px] w-[110px] text-center flex items-center justify-center cursor-pointer;
+    }
   
+    .btn:hover {
+      @apply opacity-75;
+    }
+  
+    .btn-white {
+      @apply bg-white text-[#161647] h-[40px] w-[110px] text-center flex items-center justify-center cursor-pointer;
+    }
+  
+    .btn-white:hover {
+      @apply opacity-75;
+    }
+  }
