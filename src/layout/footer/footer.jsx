@@ -1,0 +1,39 @@
+import React from 'react'
+import Image from 'next/image'
+import logo from '../../../public/assets/Group 1.png'
+import Link from 'next/link'
+import backgroundbanner from '../../../public/assets/Group 71.png'
+const footer = () => {
+    const nav=[{name:'Home',link:'/'},{name:'About us',link:'/About'},{name:'Brands',link:'/Brands'},{name:'Blogs',link:'/Blogs'},{name:'Contact us',link:'/contact'}]
+ const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'/Instagram'},{name:'Facebook',link:'/facebook'},{name:"LinkedIn",link:'/linkedin'}]
+ return (
+ 
+ <div className='md:flex w-full h-64 justify-between px-4 md:px-15 py-5'>  
+     <div className='w-44'><Image src={logo}   alt="logo"
+             width={100} height={80}
+             className=" object-cover"/></div>
+      <div className='md:flex md:w-[550px] justify-between'>
+        <div><h3 className='text-primary font-bold leading-12'>Quick Links</h3>
+        <ul className='flex flex-col leading-8' >
+ {
+            nav.map((elem,index)=>{
+              return  <li key={index} className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
+
+            })
+        }</ul>
+</div>
+      <div><h3 className='text-primary font-bold leading-12'>Follow Us on</h3>
+      <ul  className=' flex flex-col leading-8'>
+      {social.map((elem,index)=>{
+      return <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>})}
+      </ul></div>
+      <div><h3 className='text-primary font-bold leading-12'>Get In Touch</h3>
+      <ul  className=' flex flex-col leading-8'>
+      <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>+971-52-7500-909</li>
+      <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href='/'>www.oceanstar.ae</Link></li>
+      <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>sales@oceanstar.ae</li></ul></div></div>
+    </div>
+  )
+}
+
+export default footer;
