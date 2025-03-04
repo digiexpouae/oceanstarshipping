@@ -39,4 +39,18 @@ body{
     .btn-white:hover {
       @apply opacity-75;
     }
+    .slider {
+      @apply flex overflow-x-auto h-[138px] w-full;
+    }
+    
+    /* Make scrollbar very thin but still draggable */
+    .slider::-webkit-scrollbar {
+      width: 4px;  /* Keep a small width for dragging */
+      height: 4px;
+    }
+    
+    /* Hide the scrollbar visually */
+    .slider::-webkit-scrollbar-thumb {
+      background: transparent; /* Make the thumb (handle) invisible */
+    }
   }

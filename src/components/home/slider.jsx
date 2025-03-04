@@ -12,10 +12,10 @@ import Image from 'next/image'
 const slider = () => {
     const Images=[nokia,motorolla,xiaomi,hp,lenovo,huawei,samsung,apple]
   return (
-    <div className='flex overflow-x-auto scrollbar-hide  h-[138px] w-full'>
+    <div className='slider'>
       {
-        Images.map((elem,index)=>{
-            return <Image  width={275} height={138} src={elem} />
+        Images.map((elem,index)=>{  
+            return <Image  width={235} height={88} src={elem} />
         })
       }
     </div>

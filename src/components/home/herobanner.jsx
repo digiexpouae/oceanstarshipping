@@ -4,7 +4,6 @@ import heroban from '../../../public/assets/image.png'
 const herobanner = () => {
   return (
     <>  
-    
   <div className="relative w-full h-[250px] md:!h-[600px] mb-3">
   <div className='absolute left-0 top-0 right-0 bottom-0'> <Image
       src={heroban}
