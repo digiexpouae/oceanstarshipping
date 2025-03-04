@@ -11,8 +11,8 @@ const footer = () => {
     const nav=[{name:'Home',link:'/'},{name:'About us',link:'/About'},{name:'Brands',link:'/Brands'},{name:'Blogs',link:'/Blogs'},{name:'Contact us',link:'/contact'}]
  const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'/Instagram'},{name:'Facebook',link:'/facebook'},{name:"LinkedIn",link:'/linkedin'}]
  return (
-  <>
- <div className="md:flex w-full h-[471px] justify-between px-4 md:px-15 py-15  bg-[url('/assets/Group%2071.png')] bg-[#F6F6F6] bg-no-repeat" style={{ backgroundPosition: '-84px center' }}>  
+  <div className=' w-full'>
+ <div className="md:flex w-full  justify-between px-4 md:px-15 py-15  bg-[url('/assets/Group%2071.png')] bg-[#F6F6F6] bg-no-repeat" style={{ backgroundPosition: '-84px center' }}>  
      <div className='w-44'><Image src={logo}   alt="logo"
              width={100} height={80}
              className=" object-cover"/></div>
@@ -37,16 +37,16 @@ const footer = () => {
       <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href='/'>www.oceanstar.ae</Link></li>
       <li className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>sales@oceanstar.ae</li></ul></div></div>
     </div>
-        <div className='h-[84px] w-full bg-primary flex items-center justify-between text-white text-bold px-[20px]'>
-          <div className='text-[20px] font-Gilroy-Regular'>Copyright &copy; {new Date().getFullYear()}</div>
-          <div className='flex justify-between h-[30px] w-[158px]'>
+     <div className='h-[84px] w-full bg-primary flex items-center justify-between text-white text-bold px-[20px]'>
+  <div className='text-[20px]'>Copyright &copy; {new Date().getFullYear()}</div>
+      <div className='flex justify-between h-[30px] w-[158px]'>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer'><Link href='/'><FontAwesomeIcon icon={faFacebookF} className="text-primary" />  </Link> </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer'><Link href='/'><FontAwesomeIcon icon={faLinkedinIn} className="text-primary" /> </Link>   </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer'><Link href='/'><FontAwesomeIcon icon={faYoutube} className="text-primary" />    </Link>   </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer'><Link href='/'><FontAwesomeIcon icon={faInstagram} className="text-primary" />  </Link>  </div>
           </div>
         </div>
-</>
+</div>
   )
 }
 

@@ -10,7 +10,7 @@ const header = () => {
   const [open, setopen] = useState(false)
   const nav=['Home','About us','Brands','Blogs' ]
   return (
-<div className="flex !justify-between w-full items-center md:px-18 h-[113px] px-10  bg-white">
+<div className="flex !justify-between w-full items-end md:px-18 h-[78px] px-10  bg-white">
 <div><Image src={logo}   alt="logo"
         width={100} height={80}
         className=" object-cover"/></div>
