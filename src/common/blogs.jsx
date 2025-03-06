@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import blogimage from '../../../public/assets/image (1).png'
-import arrow from '../../../public/assets/Vector (6).svg'
+import blogimage from '../../public/assets/image (1).png'
+import arrow from '../../public/assets/Vector (6).svg'
 const blogs = () => {
 const blog_data=[{image:blogimage,release:'Press Release',date:'18 November 25', heading: (
   <>

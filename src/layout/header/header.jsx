@@ -3,6 +3,7 @@ import logo from '../../../public/assets/Group 1.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 const header = () => {
 
@@ -10,7 +11,7 @@ const header = () => {
   const [open, setopen] = useState(false)
   const nav=['Home','About us','Brands','Blogs' ]
   return (
-<div className="flex !justify-between w-full items-end md:px-18 h-[78px] px-10  bg-white">
+<div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-10  bg-white">
 <div><Image src={logo}   alt="logo"
         width={100} height={80}
         className=" object-cover"/></div>
@@ -20,7 +21,7 @@ const header = () => {
         </a>
       {/* mobile nav */}
         <div className={`fixed h-full w-3/4 duration-300 ease-in-out flex flex-col pt-14 px-10 items-center leading-16  bg-black right-[-40px] top-0 bottom-0 z-50   ${open ? "block" : "translate-x-96"}`}>
-        <a className='absolute h-[35px] w-[35px] bg-white left-[20px] top-[10px] flex justify-center items-center text-xl bold' onClick={()=>{(setopen(false))}}>x</a>
+        <a className='absolute h-[35px] w-[35px] bg-white left-[20px] top-[10px] flex justify-center items-center text-xl bold' onClick={()=>{(setopen(false))}}> <FontAwesomeIcon icon={faXmark} /></a>
         <div className=' w-full '><Image src={logo}     alt="logo"
         width={100} height={80}
         className="rounded-lg object-cover"/></div>

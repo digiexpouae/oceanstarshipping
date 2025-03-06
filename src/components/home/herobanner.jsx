@@ -8,8 +8,8 @@ const herobanner = () => {
   <div className='absolute left-0 top-0 right-0 bottom-0'> <Image
       src={heroban}
       layout="responsive"
-      height={200}
-      width={200}
+      // height={200}
+      // width={200}
       alt="Hero Banner"    className="h-[500px] md:!h-[600px]"
     /></div> 
 <div className="z-40 leading-[1] flex flex-col align-bottom justify-start  absolute top-[10%]  md:top-[22%] left-[4%] lg:top-[35%] lg:left-[10%]">

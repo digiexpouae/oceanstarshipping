@@ -17,6 +17,9 @@ module.exports = {
         heading: ["Orbitron", "sans-serif"],
       },
     },
+    screen:{
+      xs:'540px'
+    }
   },
   plugins: [],
 };
