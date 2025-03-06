@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import blogimage from '../../public/assets/image (1).png'
 import arrow from '../../public/assets/Vector (6).svg'
-const blogs = () => {
+const blogs = ({Homepage}) => {
+  const [show, setshow] = useState(true)
 const blog_data=[{image:blogimage,release:'Press Release',date:'18 November 25', heading: (
   <>
     This is a Blog of Electronic <br /> Wholesale Appliances website  Appliances website
@@ -16,15 +17,24 @@ const blog_data=[{image:blogimage,release:'Press Release',date:'18 November 25',
       <>
         This is a Blog of Electronic <br /> Wholesale Appliances website Appliances website
       </>
+    )},
+    {image:blogimage,release:'Press Release' ,date:'25 November 24', heading: (
+      <>
+        This is a Blog of Electronic <br /> Wholesale Appliances website Appliances website
+      </>
+    )},
+    {image:blogimage,release:'Press Release' ,date:'25 November 24', heading: (
+      <>
+        This is a Blog of Electronic <br /> Wholesale Appliances website Appliances website
+      </>
     )}]
-
-
+const filtereddata=Homepage?blog_data:blog_data.slice(0, 3);
   return (
     <>
   <div className=''>
     <h3 className=' text-[22px] text-primary md:text-[50px] underline mb-3 md:mb-8 font-heading font-bold text-center'>OUR BLOGS</h3>
-    <div className='w-full h-[200]  flex flex-col lg:grid lg:grid-cols-3 gap-3 place-items-center mb-4'>
-      {blog_data.map((elem,index)=>{
+    <div className={`w-full h-[200]  flex flex-col md:grid grid-cols-3 ${show?' grid-rows-1':'auto-rows-auto'} gap-3 place-items-center mb-4`}>
+      {filtereddata.map((elem,index)=>{
          
          return <>
                 

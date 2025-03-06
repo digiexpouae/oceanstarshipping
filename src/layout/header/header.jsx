@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import logo from '../../../public/assets/Group 1.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import Link from 'next/link';
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 const header = () => {
 
 
   const [open, setopen] = useState(false)
-  const nav=['Home','About us','Brands','Blogs' ]
+  const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'brands'},{name:'Blogs',link:"/blogs"} ]
   return (
 <div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-10  bg-white">
 <div><Image src={logo}   alt="logo"
@@ -27,11 +27,11 @@ const header = () => {
         className="rounded-lg object-cover"/></div>
         <div className='w-full'>
         <ul className=' !justify-between w-96 ' >
-    
-     <li  className='text-white transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Home</li>
-     <li  className='text-white transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>About us</li>
-     <li  className='text-white transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Brands</li>
-     <li  className='text-white transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Blogs</li>
+{nav.map((elem, index)=>{
+   return  <li  key={index} className='text-white transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
+
+})    
+}
 </ul>
 </div>
 <div className='w-full items-center'><button className='btn'>Contact us</button></div>
@@ -41,11 +41,12 @@ const header = () => {
   <div className='hidden md:flex'>
     {/* link should be added  */}
     <ul className=' hidden md:flex !justify-between w-96' >
-   <li  className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Home</li>
-   <li  className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>About us</li>
-   <li  className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Brands</li>
-   <li  className='transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'>Blogs</li>
+      
+    {nav.map((elem,index)=>{
+   return  <li  key={index} className='text-black transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
 
+})    
+}   
 </ul>
  </div>
  <div className='hidden md:flex'><button className='btn'>Contact us</button></div>
