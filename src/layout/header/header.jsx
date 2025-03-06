@@ -9,7 +9,7 @@ const header = () => {
 
 
   const [open, setopen] = useState(false)
-  const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'brands'},{name:'Blogs',link:"/blogs"} ]
+  const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'/brands'},{name:'Blogs',link:"/blogs"} ]
   return (
 <div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-10  bg-white">
 <div><Image src={logo}   alt="logo"
@@ -34,7 +34,7 @@ const header = () => {
 }
 </ul>
 </div>
-<div className='w-full items-center'><button className='btn'>Contact us</button></div>
+<div className='w-full items-center'><button className='btn'><Link href='/contact'>Contact us</Link></button></div>
 
         </div>
         </div>
@@ -49,7 +49,7 @@ const header = () => {
 }   
 </ul>
  </div>
- <div className='hidden md:flex'><button className='btn'>Contact us</button></div>
+ <div className='hidden md:flex'><button className='btn'><Link href='/contact'>Contact us</Link></button></div>
  </div>
 
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import Herobanner from './herobanner'
 import Footer from '@/layout/footer/footer'
 import Products from './products'
-import Blogs from '../../common/blogs'
+import Blog from './blog_section'
 import Bannerone from './bannerone'
 import Slider from '../../common/slider'
 import Bannertwo from '../../common/bannertwo'
@@ -17,7 +17,7 @@ const index = () => {
    <Slider />
    <Products />
    <Bannerone />
-   <Blogs Homepage={false}/>
+   <Blog />
    <Bannertwo />
    <Feature />
    <Footer />
