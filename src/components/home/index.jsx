@@ -11,8 +11,9 @@ import Feature from '../../common/feature'
 const index = () => {
   return (
   <>
-  <div className='flex flex-col justify-between'>
-      <Header />
+        <Header />
+  <div className='flex flex-col justify-between gap-5'>
+
    <Herobanner />
    <Slider />
    <Products />

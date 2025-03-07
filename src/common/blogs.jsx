@@ -32,13 +32,13 @@ const blogs = ({Homepage}) => {
 const filtereddata=Homepage?blog_data:blog_data.slice(0, 3);
   return (
     <>
-    <div className={`w-full h-[200]  flex flex-col md:grid grid-cols-3 ${show?' grid-rows-1':'auto-rows-auto'} gap-3 place-items-center mb-4`}>
+    <div className='h-[200]  flex flex-col lg:grid lg:grid-cols-3 place-items-center'>
       {filtereddata.map((elem)=>{
          
          return <div key={elem.id}>
                 
 
-         <div className='flex flex-col bg-primary w-[250px] h-[282px] md:w-[300px] md:h-[390px] text-white '>
+         <div className='flex flex-col bg-primary w-[250px] h-[282px] md:w-[300px] md:h-[390px] text-white  mb-4'>
       <div className=' w-[250px] h-[100px] md:w-full md:h-[160px] relative'><Image src={elem.image} layout='fill' objectFit='cover' /></div>
       <div className="h-[182px] ]w-[288px] px-3 py-7">
         <div className='flex justify-between  font-thin text-[12px] md:text-[16px] '><div className='bg-white/10 px-3 py-1'>{elem.release}</div><div className='bg-white/10 px-3 py-1 '>{elem.date}</div></div>

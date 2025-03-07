@@ -14,6 +14,7 @@ const index = () => {
   return (
     <>
     <Header />
+    <div className='flex flex-col '>
     <Banner image={aboutbanner} tag={<>About <br /> us </>} />
     <Aboutus />
     <Slider />
@@ -23,7 +24,7 @@ const index = () => {
     <Bannertwo />
     <Feature />
     <Footer />
-
+    </div>
     </>
   )
 }

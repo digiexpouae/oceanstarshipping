@@ -17,10 +17,10 @@ const service = () => {
         Ocean Star</h2>
         <div className='flex flex-col md:grid md:grid-cols-2  lg:grid-cols-3 w-full'> 
     {box.map((elem,index)=>{
-        return <div key={index} className='flex flex-col justify-center items-center h-[200px] md:h-[308px] w-full'>
-            <div className='flex items-center justify-center w-full'><Image src={elem.image} height={45} width={45} /></div>
-          <div className='h-[98px] w-full text-center'>
-            <div className='text-primary text-[25px]'>{elem.heading}</div>
+        return <div key={index} className='flex flex-col justify-center items-center h-[200px] md:h-[230px] w-full'>
+        <div className='flex items-center justify-center w-full'><Image src={elem.image} height={45} width={45} /></div>
+          <div className='h-[98px]  text-center w-full'>
+            <div className='text-primary text-[22px] xl:text-[25px]'>{elem.heading}</div>
             <span className='text-center'>{elem.text}</span>
             </div>
         </div>
