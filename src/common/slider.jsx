@@ -15,7 +15,7 @@ const slider = () => {
     <div className='slider'>
       {
         Images.map((elem,index)=>{  
-            return <Image  width={225} height={58} src={elem} />
+            return <Image key={index}  width={225} height={58} src={elem} />
         })
       }
     </div>
