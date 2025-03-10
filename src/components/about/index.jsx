@@ -14,8 +14,9 @@ const index = () => {
   return (
     <>
     <Header />
-    <div className='flex flex-col '>
+
     <Banner image={aboutbanner} tag={<>About <br /> us </>} />
+    <div className='flex flex-col gap-15'>
     <Aboutus />
     <Slider />
     <Goal />

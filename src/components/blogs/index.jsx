@@ -11,10 +11,12 @@ const index = () => {
 <>
 <Header />
 <Banner  image={heroimage}  tag={<>OUR <br /> BLOGS</>}/>
+<div className='flex flex-col justify-between gap-15'>
 <Blogs Homepage={true} />
 <Bannertwo />
 <Feature />
 <Footer />
+</div>
 </>
   )
 }
