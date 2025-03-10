@@ -12,11 +12,20 @@ import Image from 'next/image'
 const slider = () => {
     const Images=[nokia,motorolla,xiaomi,hp,lenovo,huawei,samsung,apple]
   return (
-    <div className='slider'>
+    <div className='slider gap-6'>
       {
         Images.map((elem,index)=>{  
-            return <Image key={index}  width={225} height={58} src={elem} />
-        })
+           
+          return     <div className='md:w-[238px] md:h-[138px]  w-[150px] h-[55px] relative shrink-0'> <Image 
+  src={elem} 
+    layout="fill"
+
+  alt="Logo"  
+className='object-cover'
+
+/>
+</div>
+      })
       }
     </div>
   )
