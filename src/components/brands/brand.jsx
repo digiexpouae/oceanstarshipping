@@ -11,11 +11,11 @@ import Image from 'next/image'
 const brand = () => {
 const Images=[nokia,motorolla,xiaomi,hp,lenovo,huawei,samsung,apple]
   return (
-    <div className='w-full flex items-center justify-center h-[500px] md:h-[700px]'>
-    <div className='grid grid-cols-2 place-items-center h-[400px] md:h-[650px] lg:w-[500px] gap-1.5'>
+    <div className='w-full flex justify-center h-[500px] md:h-[982px]'>
+    <div className='grid grid-cols-2 place-items-center h-[400px]  gap-x[60px] gap-y-[50px] md:gap-x-[50px] lg:gap-x-[120px] w-[80%] md:w-[65%]'>
       {
         Images.map((elem,index)=>{  
-            return <div className='shadow relative w-[125px] h-[65px] md:w-[235px] md:h-[120px]'><Image layout='responsive' src={elem} /></div>
+            return <div className='shadow relative w-[125px] h-[65px] md:w-[230px] md:h-[120px] lg:w-[350px] lg:h-[204px]'><Image layout='fill' src={elem} /></div>
         })
       }
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import heroban from '../../../public/assets/image.png'
+import Link from 'next/link'
 const herobanner = () => {
   return (
     <>  
@@ -17,7 +18,7 @@ const herobanner = () => {
   </span>
   <h1 className='text-[21px] text-white md:text-[40px] lg:text-[50px] mb-3 md:mb-8 font-heading font-bold leading-[1.2]'>WORLD WITH <br />
 TECHNOLOGY</h1>
-<button className='btn-white '>Contact us</button>
+<button className='btn-white '><Link href='/contact'>Contact us</Link></button>
 </div>
 </div>
 
