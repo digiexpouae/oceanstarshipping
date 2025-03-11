@@ -41,7 +41,7 @@ body{
       @apply opacity-75;
     }
     .slider {
-      @apply flex overflow-x-auto h-[138px] w-full;
+      @apply flex overflow-x-auto h-[138px] w-full overflow-y-hidden;
     }
     
     /* Make scrollbar very thin but still draggable */
