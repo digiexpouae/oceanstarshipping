@@ -6,7 +6,7 @@ const bannerone = () => {
     <div className=' md:h-[644px] w-full bg-gradient-to-l from-[#F6F6F6] via-[rgba(246,246,246,0)] to-transparent relative'>
       <Image src={banner} height={403} width={1090} className='w-full' objectFit='cover'/>
 <div className='absolute  top-[20px]  left-[20px] xl:top-[96px] xl:left-[117px] z-50 '>
-<div className=' text-primary text-[13px] sm:text-[16px]  md:text-[25px] lg:text-[28px] lg:text-[40px] font-heading font-extrabold w-[220px] md:w-[500px] lg:w-[650px] mb-3 md:mb-5 xl:mb-10 leading-4.5 md:leading-11 capitalize  '>Ocean Star is a 
+<div className=' text-primary text-[13px] sm:text-[16px]  md:text-[25px] lg:text-[28px] font-heading font-extrabold w-[220px] md:w-[500px] lg:w-[650px] mb-3 md:mb-5 xl:mb-10 md:leading-9 leading-4 lg:leading-13 uppercase  '>Ocean Star is a 
 <br />leading electronic 
 trading company 
 based in the United 
