@@ -9,6 +9,7 @@ import arrow from '../../../public/assets/Vector (6).svg'
 
 import Link from 'next/link'
 const products = () => {
+  
     const images=[{image:headphones,link:'/',title:'Headphones'},{image:mobilephone,link:'/',title:'Mobile phones'},{image:tablets,link:'/',title:'Tablets'},
         {image:LED,link:'/',title:'LED'},{image:playstation,link:'/',title:'Other Accessorries'}]
   return (
@@ -16,9 +17,9 @@ const products = () => {
         <h3 className=' text-[22px] text-primary md:text-[50px] underline mb-3 md:mb-8 font-heading font-bold text-center'>PRODUCTS</h3>
       <div className=' flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center w-full'>
         {images.map((elem,index)=>{
-       return <div className=' bg-[#F6F6F6] w-[300px] h-[260px]  xl:w-[380px] lg:h-[333px]  flex flex-col justify-center items-center'> 
-       <div key={index} className='h-[80%] w-[220px]  md:w-[270px] xl:w-[268px] flex flex-col justify-center items-center'><Image src={elem.image}/> </div>
-<Link href={elem.link} className='text-start h-[20%] md:text-start w-full px-[8px] text-primary text-start flex items-center font-bold' >{elem.title}</Link>
+       return <div className=' bg-[#F6F6F6] w-[300px] h-[260px] md:h-[300px]  xl:w-[340px] lg:h-[300px]  flex flex-col justify-center items-center'> 
+       <div key={index} className='h-[85%] w-[220px]  md:w-[270px] xl:w-[268px] flex flex-col justify-center items-center'><Image src={elem.image} /> </div>
+<Link href={elem.link} className='h-[15%] md:text-start w-full py-6 px-[18px] text-primary text-start flex items-center font-bold' >{elem.title}</Link>
 
        </div>
 })}

@@ -11,7 +11,7 @@ const header = () => {
   const [open, setopen] = useState(false)
   const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'/brands'},{name:'Blogs',link:"/blogs"} ]
   return (
-<div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-10  bg-white">
+<div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-6 bg-white">
 <Link href='/'><Image src={logo}   alt="logo"
         width={100} height={80}
         className=" object-cover"/></Link>
@@ -28,7 +28,7 @@ const header = () => {
         <div className='w-full'>
         <ul className=' !justify-between w-96 ' >
 {nav.map((elem, index)=>{
-   return  <li  key={index} className='text-primary transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
+   return  <li  key={index} className='text-primary transition-all duration-300  hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
 
 })    
 }
@@ -43,7 +43,7 @@ const header = () => {
     <ul className=' hidden md:flex !justify-between w-96' >
       
     {nav.map((elem,index)=>{
-   return  <li  key={index} className='text-black transition-all duration-300 delay-200 hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
+   return  <li  key={index} className='text-black transition-all duration-300  hover:text-primary hover:font-bold cursor-pointer'><Link href={elem.link}>{elem.name}</Link></li>
 
 })    
 }   
