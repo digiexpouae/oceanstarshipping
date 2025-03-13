@@ -33,7 +33,7 @@ alert("failed to send message")
       <form action="" className='flex flex-col gap-5 w-[70%] md:w-[50%] ' onSubmit={handlesubmit}>
         <input type="text" placeholder='Enter your full name' name='name' onChange={handlechange} className='h-[54px] border border-primary outline-none px-5 '/>
         <input type="email" placeholder='Email'    onChange={handlechange} name='email' className='h-[54px] border border-primary outline-none  px-5' />
-    <input type="number"  placeholder='Phone number'  onChange={handlechange} name='phonenumber' className='h-[54px] border border-primary outline-none  px-5'/>
+    <input type="text"  placeholder='Phone number'  onChange={handlechange} name='phonenumber' className='h-[54px] border border-primary outline-none  px-5'/>
         <textarea id="" placeholder='Message'     onChange={handlechange} name='message' className=' border border-primary h-[225px] outline-none px-5 py-3'></textarea>
 
     <button className='btn'>Contact Us</button>
