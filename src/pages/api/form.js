@@ -1,12 +1,12 @@
  import { createClient } from "@sanity/client";
 
-const sanityClient = createClient({
-   projectId:'6kvdqvro' ,// Replace with actual Project ID
+export const sanityClient = createClient({
+   projectId:'6kvdqvro',// Replace with actual Project ID
    dataset:'production', // Example: 'production'
-  apiVersion:"2025-03-12",
+  apiVersion:'2025-03-12',
     
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN, // Store in .env file
+  token: 'skpTDyV2Onyh30A1Y40zRw0eUywaTovXTxUHIv8y9blJrVdtasSp4HnLQpoMTAlUsH8Hd1QueFeR7HffYzXRgnf7rdP6g5VL8zR5RhhqnftJrv6svPHNENfxS7zIflDbL7RksYl0TLkFejRtkFv6ECG0gOeMldU7Caq6jl8hl0KOZXl0t1U0', // Store in .env file
 });
 
 export default async function handler(req, res) {
