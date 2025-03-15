@@ -1,14 +1,24 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../../public/assets/Group 1.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
-
+import { useRouter } from 'next/router';
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 const header = () => {
+const router =useRouter();
+
+ const handlelogout=async ()=>{
+  await fetch('api/logout',{method:'POST'})
+  router.push('/admin')
+ }
+
+
 
   const [open, setopen] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
   const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'/brands'},{name:'Blogs',link:"/blogs"} ]
   return (
 <div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-6 bg-white">
@@ -47,9 +57,34 @@ const header = () => {
 
 })    
 }   
+
 </ul>
  </div>
  <div className='hidden md:flex'><button className='btn'><Link href='/contact'>Contact us</Link></button></div>
+ {router.pathname === "/leads" && (
+        <div className="relative">
+          {/* Profile Button */}
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="p-2 rounded-full cursor-pointer  w-[30px] h-[30px] flex justify-center items-center bg-gray-700"
+          >
+            <FontAwesomeIcon icon={faUser} className="text-xl" />
+          </button>
+
+          {/* Dropdown Menu */}
+          {showMenu && (
+            <div className="absolute right-0 mt-2 w-40 bg-white text-black shadow-md rounded">
+            
+              <button
+                className="block w-full px-4 py-2 hover:bg-red-500 hover:text-white"
+                onClick={handlelogout}
+              >
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
+      )}
  </div>
 
   )

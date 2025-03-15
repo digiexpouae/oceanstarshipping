@@ -1,21 +1,33 @@
 import React, { useState } from 'react'
-
+import { useRouter } from 'next/router'
 const admin = () => {
 const [username, setusername] = useState("")
 const [password, setpassword] = useState("")
 const jwt=require("jsonwebtoken")
-const token =jwt.sign({useremail:"admin@gmail.com"},process.env.NEXT_SECRET_KEY,{expiresIn:'1h'})
-if(username=='admin@gmail.com' && password =="123498"){
-  console.log(token)
+const router=useRouter()
+const submithandler=async (e)=>{
+
+  e.preventDefault();
+try{
+  const response=await fetch('api/login',{
+    method:'POST',  
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({username,password}),
+  })
+if (response.ok){
+   router.push("/leads")
 }
-const submithandler=()=>{
-    
 }
+catch(error){
+  console.log("invalid credentials",error)
+
+}
+  }
   return (
     <div style={{ textAlign: "center", padding: "50px" }}>
     <h1>Admin Login</h1>
     {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-    <form  style={{ display: "inline-block" }}>
+    <form  onSubmit={submithandler} style={{ display: "inline-block" }}>
         <input 
             type="text" placeholder="Username" required
           

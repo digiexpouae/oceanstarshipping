@@ -2,10 +2,29 @@ import React, { useEffect, useState } from 'react';
 import Header from '@/layout/header/header';
 import Footer from '@/layout/footer/footer';
 import { sanityClient } from './api/form';
-
+import Router, { useRouter } from 'next/router';
 const Leads = () => {
+  const router=useRouter()
   const [leads, setLeads] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const verifyUser = async () => {
+      try {
+        const response = await fetch("/api/verify");
+        if (!response.ok) {
+          throw new Error("Invalid token");
+        }
+        setIsLoading(false); // Token valid, show page
+      } catch (error) {
+        router.push("/admin"); // Redirect to login
+      }
+    };
 
+    verifyUser();
+  }, [router]);
+ 
+ 
+ 
   useEffect(() => {
     sanityClient
       .fetch('*[_type == "formSubmission"]| order(_createdAt desc) {_id,name,email,phonenumber,message}')
@@ -23,7 +42,9 @@ const Leads = () => {
       console.error("Error:", error); // Fixed the error logging
     }
   };
-  
+  if (isLoading) {
+    return <p>Loading...</p>; // Show a loader while checking auth
+  }
   return (
     <div>
       <Header />
