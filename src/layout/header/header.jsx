@@ -66,7 +66,7 @@ const router =useRouter();
           {/* Profile Button */}
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="p-2 rounded-full cursor-pointer  w-[30px] h-[30px] flex justify-center items-center bg-gray-700"
+            className="p-2 rounded-full cursor-pointer  w-[30px] h-[30px] flex justify-center items-center bg-gray-300"
           >
             <FontAwesomeIcon icon={faUser} className="text-xl" />
           </button>
@@ -74,9 +74,9 @@ const router =useRouter();
           {/* Dropdown Menu */}
           {showMenu && (
             <div className="absolute right-0 mt-2 w-40 bg-white text-black shadow-md rounded">
-            
+            <div className='text-center'>admin</div>
               <button
-                className="block w-full px-4 py-2 hover:bg-red-500 hover:text-white"
+                className="block w-full px-4 py-2 hover:bg-red-500 hover:text-white cursor-pointer"
                 onClick={handlelogout}
               >
                 Logout

@@ -8,7 +8,7 @@ export default function handler(req, res) {
 
   const { username, password } = req.body;
 
-  if (username === "admin@gmail.com" && password === "123498") {
+  if (username === "admin" && password === "admin") {
     const token = jwt.sign(
       { useremail: "admin@gmail.com" },
       process.env.NEXT_PUBLIC_SECRET_KEY, // No `NEXT_PUBLIC_`

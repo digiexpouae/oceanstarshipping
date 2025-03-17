@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
+import { faListCheck } from '@fortawesome/free-solid-svg-icons'
 const admin = () => {
 const [username, setusername] = useState("")
 const [password, setpassword] = useState("")
+const [clicked, setclicked] = useState(true)
 const jwt=require("jsonwebtoken")
 const router=useRouter()
 const submithandler=async (e)=>{
 
   e.preventDefault();
+  setclicked(false)
 try{
   const response=await fetch('api/login',{
     method:'POST',  
@@ -24,23 +27,23 @@ catch(error){
 }
   }
   return (
-    <div style={{ textAlign: "center", padding: "50px" }}>
-    <h1>Admin Login</h1>
+    <div  className='flex flex-col items-center justify-center h-[100vh] md:h-[700px] w-full' >
+    <h1 className='text-extrabold text-[30px] md:text-[45px] text-primary font-heading uppercase select-none'>Admin login</h1>
     {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-    <form  onSubmit={submithandler} style={{ display: "inline-block" }}>
+    <form  onSubmit={submithandler} className='flex flex-col  items-center justify-center gap-5 w-full'>
         <input 
             type="text" placeholder="Username" required
           
-            style={{ display: "block", margin: "10px 0", padding: "8px" }}
+            className='md:w-[405px] w-[70%] py-4 px-2 border rounded border-primary-300 outline-none'
         value={username}
         onChange={(e)=>setusername(e.target.value)}
         />
         <input 
             type="password" placeholder="Password" required
           value={password} onChange={(e)=>setpassword(e.target.value)}
-            style={{ display: "block", margin: "10px 0", padding: "8px" }}
+               className='md:w-[405px] py-4 w-[70%] px-2 border rounded border-primary-700  outline-none'
         />
-        <button type="submit" style={{ padding: "10px", cursor: "pointer" }}>Login</button>
+        <button type="submit" className={`bg-primary text-white md:w-[405px] w-[70%] ${clicked?'cursor-pointer':'cursor-notallowed opacity-50'}`} style={{ padding: "10px" }}>Login</button>
     </form>
 </div>
   )
