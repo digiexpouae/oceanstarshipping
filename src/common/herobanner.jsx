@@ -6,7 +6,7 @@ const bannerabout = ({image,tag}) => {
    <div className="relative w-full h-[225px] md:!h-[600px] mb-3 flex items-center">
     <div className='absolute left-0 top-0 right-0 bottom-0'> <Image
         src={image}
-        layout="responsive"
+        layout="fill"
         // height={200}
         // width={200}
         alt="Hero Banner"    className="h-[500px] md:!h-[550px]"
