@@ -38,7 +38,7 @@ alert("failed to send message")
     <input type="text"  placeholder='Phone number'  onChange={handlechange} value={formData.phonenumber} name='phonenumber' className='h-[54px] border border-primary outline-none  px-5'/>
         <textarea id="" placeholder='Message'   value={formData.message}  onChange={handlechange} name='message' className=' border border-primary h-[225px] outline-none px-5 py-3'></textarea>
 
-    <button className={`btn ${submit}? cursor-pointer:cursor-not-allowed`} disabled={submit} >Contact Us</button>
+    <button className={`btn ${submit? "cursor-not-allowed":"cursor-pointer"}`}  >Contact Us</button>
       </form>
 
 
