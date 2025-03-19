@@ -11,7 +11,7 @@ import Image from 'next/image'
 const brand = () => {
 const Images=[nokia,motorolla,xiaomi,hp,lenovo,huawei,samsung,apple]
   return (
-    <div className='w-full flex justify-center h-[500px] md:h-[982px]'>
+    <div className='w-full flex justify-center h-[500px] md:h-[982px] md:p-0 p-[20px]'>
     <div className='grid grid-cols-2 place-items-center h-[400px]  gap-x[60px] gap-y-[50px] md:gap-x-[50px] lg:gap-x-[120px] w-[80%] md:w-[65%]'>
       {
         Images.map((elem,index)=>{  

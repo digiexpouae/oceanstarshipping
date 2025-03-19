@@ -12,7 +12,7 @@ trading company
 based in the United 
 Arab Emirates,
 established in 2007</div> 
-<div className=' md:text-[10px] text-[8px] top-[40px] md:text-[20px] lg:text-[23px] text-primary leading-2.5 w-full capitalize h-[60px] left-[20px] md:left-[117px] md:top-[106px] md:leading-6.5'>Over the years, we have built a strong reputation as a trusted provider of high-quality electronic products, catering to both corporate and retail clients across the UAE.</div>
+<div className=' md:text-[10px] text-[8px] top-[40px] md:text-[20px] lg:text-[23px] text-primary leading-2.5 w-full  h-[60px] left-[20px] md:left-[117px] md:top-[106px] md:leading-6.5 lowercase'>Over the years, we have built a strong reputation as a trusted provider of high-quality electronic products, catering to both corporate and retail clients across the UAE.</div>
 </div>
     </div>
   )

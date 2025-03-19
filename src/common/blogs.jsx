@@ -34,12 +34,12 @@ const blogs = ({Homepage,searchvalue}) => {
           <div className='w-[250px] h-[100px] md:w-full md:h-[160px] relative'>
             <Image src={urlFor(elem.imageUrl)} layout='fill' objectFit='cover' />
           </div>
-          <div className="h-[182px] w-[288px] px-3 py-7">
+          <div className="h-[182px] md:w-[288px] w-[250px] px-3 py-7">
             <div className='flex justify-between font-thin text-[12px] md:text-[16px]'>
-              <div className='bg-white/10 px-3 py-1'>Release</div>
+              <div className='bg-white/10 px-3 py-1'>Press Release</div>
               <div className='bg-white/10 px-3 py-1'>{elem.publishedDate}</div>
             </div>
-            <div className='text-white truncate text-[14px] md:text-[20px] leading-8 md:w-[300px] h-[72px]'>
+            <div className='text-white truncate text-[14px] md:text-[20px] leading-8 md:w-[280px] w-[200px] h-[72px] mt-2'>
               {elem.title}
             </div>
             <div className='flex items-center w-[101px] gap-[10px]'>
