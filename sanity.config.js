@@ -8,12 +8,14 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
+import { projectId,dataset,apiVersion } from './src/sanity/env'
+// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
+// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-const projectId = '6kvdqvro'; // Replace with actual Project ID
-const dataset ='production' ; // Example: 'production'
-const apiVersion = "2025-03-12"; 
+
+// const projectId = '6kvdqvro'; // Replace with actual Project ID
+// const dataset ='production' ; // Example: 'production'
+// const apiVersion = "2025-03-12"; 
 
 
 import {schema} from './src/sanity/schemaTypes'

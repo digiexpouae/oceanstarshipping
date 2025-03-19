@@ -24,10 +24,10 @@ const { slug } = context.params
   
   try {
     const blogs = await client.fetch(query); // Get all blogs
-
     // Find the index of the current blog
-    const blogIndex = blogs.findIndex((b) => b.slug === slug);
 
+    const blogIndex = blogs.findIndex((b) => b.slug === slug);
+ 
     // If blog not found, return 404
     if (blogIndex === -1) {
       return { notFound: true };
@@ -35,9 +35,9 @@ const { slug } = context.params
 
     // Get current blog, previous blog, and next blog
     const blog = blogs[blogIndex]; // Current blog (single object)
-    const prevBlog = blogs[blogIndex - 1] || blogs[blogIndex + 1] 
-    const nextBlog = blogs[blogIndex + 1] || blogs[blogIndex - 1] ;
-
+    const prevBlog = blogs[blogIndex - 1] ?? blogs[blogs.length - 1]; 
+    const nextBlog = blogs[blogIndex + 1] ?? blogs[0];
+    console.log(blogs[blogIndex + 1])
     return {
       props: {
         blog,       // Single blog object
@@ -70,6 +70,7 @@ const Blog_post = ({blog,prevBlog,nextBlog}) => {
     const router=useRouter()
     const {title,imageUrl,content,publishedDate,slug}=blog
 console.log(blog)
+
     return (
     <div className="w-full flex flex-col items-center justify-center">
       <Header />
