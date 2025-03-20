@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/layout/header/header';
 import Footer from '@/layout/footer/footer';
-import { sanityClient } from './api/form';
+// import { sanityClient } from '';
 import Router, { useRouter } from 'next/router';
 const Leads = () => {
   const router=useRouter()
@@ -59,7 +59,7 @@ setmodal(true)
       <Header />
 
       <div className="flex items-center justify-center w-full select-none">
-        <table className="w-[80%] m-[60px] w-[80%] select-none">
+        <table className=" m-[60px] w-[80%] select-none">
           <thead>
             <tr className="bg-[#161647] text-center text-white">
             <th className="border border-primary-300 px-4 py-2">id</th>
