@@ -1,12 +1,12 @@
- import { createClient } from "@sanity/client";
-
+ import { createClient } from "next-sanity";
+import { projectId , dataset , apiVersion,  token } from "../../sanity/env";
 export const sanityClient = createClient({
-   projectId:'6kvdqvro',// Replace with actual Project ID
-   dataset:'production', // Example: 'production'
-  apiVersion:'2025-03-12',
-    
+  //  projectId:'6kvdqvro',// Replace with actual Project ID
+  //  dataset:'production', // Example: 'production'
+  // apiVersion:'2025-03-12',
+  projectId,dataset,apiVersion,
   useCdn: false,
-  token: 'skpTDyV2Onyh30A1Y40zRw0eUywaTovXTxUHIv8y9blJrVdtasSp4HnLQpoMTAlUsH8Hd1QueFeR7HffYzXRgnf7rdP6g5VL8zR5RhhqnftJrv6svPHNENfxS7zIflDbL7RksYl0TLkFejRtkFv6ECG0gOeMldU7Caq6jl8hl0KOZXl0t1U0', // Store in .env file
+  token
 });
 
 export default async function handler(req, res) {

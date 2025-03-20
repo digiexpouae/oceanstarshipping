@@ -18,7 +18,7 @@ const index = () => {
    <Slider />
    <Products />
    <Bannerone />
-   <Blog Homepage={false} />
+   <Blog  />
    <Bannertwo />
    <Feature />
    <Footer />
