@@ -36,7 +36,7 @@ body{
  @layer components {
 
   .btn {
-      @apply bg-[#161647] text-white text-[12px] md:text-[18px] h-[20px] w-[80px] md:h-[40px] md:w-[110px] text-center flex items-center justify-center cursor-pointer;
+      @apply bg-[#161647] text-white text-[12px] md:text-[18px] h-[25px] w-[80px] md:h-[40px] md:w-[110px] text-center flex items-center justify-center cursor-pointer;
     }
   
     .btn:hover {
