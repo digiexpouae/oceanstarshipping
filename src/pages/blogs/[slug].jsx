@@ -68,7 +68,7 @@ const { slug } = context.params
 import { useRouter } from "next/router";
 const Blog_post = ({blog,prevBlog,nextBlog}) => {
     const router=useRouter()
-    const {title,imageUrl,content,publishedDate,slug}=blog
+    // const {title,imageUrl,content,publishedDate,slug}=blog
 console.log(blog)
 
     return (
