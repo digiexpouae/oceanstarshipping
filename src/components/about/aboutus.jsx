@@ -4,7 +4,7 @@ const aboutus = () => {
   return (
     <>
     <div className='flex flex-col items-center justify-center w-full'>
-    <div className=' w-[80%]'><h1 className='capitalize text-[25px] md:text-[45px] font-extrabold font-heading text-primary text-center'>Ocean Star is a leading electronic trading company based in the United Arab Emirates, established in 2007.
+    <div className=' w-[80%]'><h1 className='uppercase text-[25px] md:text-[45px] font-extrabold font-heading text-primary text-center'>Ocean Star is a leading electronic trading company based in the United Arab Emirates, established in 2007.
 </h1></div>
 <div className='w-[80%]'><div className=' gap-4 leading-5 md:leading-7 flex flex-col md:gap-8 text-[13px] md:text-[25px] text-primary text-center'> <p>Over the years, we have built a strong reputation as a trusted provider of high-quality electronic products, catering to both corporate and retail clients across the UAE.</p>
 
