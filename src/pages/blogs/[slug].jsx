@@ -66,29 +66,29 @@ const { slug } = context.params
 
 // }
 import { useRouter } from "next/router";
-const Blog_post = ({blog,prevBlog,nextBlog}) => {
-    const router=useRouter()
-    // const {title,imageUrl,content,publishedDate,slug}=blog
-console.log(blog)
+// const Blog_post = ({blog,prevBlog,nextBlog}) => {
+//     const router=useRouter()
+//     const {title,imageUrl,content,publishedDate,slug}=blog
+// console.log(blog)
 
-    return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <Header />
-      <Herobanner image={urlFor(imageUrl)}/>
-      <div className="w-[80%] flex flex-col gap h-[900px]">
-      <h1 className="text-[20px] md:text-[45px] font-heading text-primary font-extrabold ">{title}</h1>
-    <div className="flex gap-1 md:gap-3 m-4"><button className="btn text-nowrap text-[10px] md:text-[12px]">Press Release</button><button className="btn text-nowrap text-[10px] md:text-[12px]">{publishedDate}</button></div>
+//     return (
+//     <div className="w-full flex flex-col items-center justify-center">
+//       <Header />
+//       <Herobanner image={urlFor(imageUrl)}/>
+//       <div className="w-[80%] flex flex-col gap h-[900px]">
+//       <h1 className="text-[20px] md:text-[45px] font-heading text-primary font-extrabold ">{title}</h1>
+//     <div className="flex gap-1 md:gap-3 m-4"><button className="btn text-nowrap text-[10px] md:text-[12px]">Press Release</button><button className="btn text-nowrap text-[10px] md:text-[12px]">{publishedDate}</button></div>
 
-      <p className="text-[12px] md:text-[20px]">{content}</p>
-    <div className="flex w-ful items-center justify-center gap-3  m-4"><button className="btn text-[12px]" onClick={() => router.push(`/blogs/${prevBlog.slug}`)}>Previous</button> <button className="btn  text-[12px]" onClick={() => router.push(`/blogs/${nextBlog.slug}`)}>Next</button></div>
-      </div>
-        <Bannertwo />
-        <Feature />
-        <Footer />
+//       <p className="text-[12px] md:text-[20px]">{content}</p>
+//     <div className="flex w-ful items-center justify-center gap-3  m-4"><button className="btn text-[12px]" onClick={() => router.push(`/blogs/${prevBlog.slug}`)}>Previous</button> <button className="btn  text-[12px]" onClick={() => router.push(`/blogs/${nextBlog.slug}`)}>Next</button></div>
+//       </div>
+//         <Bannertwo />
+//         <Feature />
+//         <Footer />
 
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 export default Blog_post
