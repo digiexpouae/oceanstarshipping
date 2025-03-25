@@ -13,7 +13,7 @@ const index = () => {
 <>
 <Header />
 <Banner  image={heroimage}  tag={<>OUR <br /> BLOGS</>}/>
-<div className='flex flex-col justify-between gap-15'>
+<div className='flex flex-col justify-between gap-35'>
 <Search setsearchvalue={setsearchvalue} />
 <Blogs Homepage={true} searchvalue={searchvalue}/>
 <Bannertwo />
