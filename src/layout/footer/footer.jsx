@@ -8,7 +8,7 @@ import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from "@fortawesome/
 
 
 const footer = () => {
-    const nav=[{name:'Home',link:'/'},{name:'About us',link:'/About'},{name:'Brands',link:'/Brands'},{name:'Blogs',link:'/Blogs'},{name:'Contact us',link:'/contact'}]
+    const nav=[{name:'Home',link:'/'},{name:'About us',link:'/about'},{name:'Brands',link:'/brands'},{name:'Blogs',link:'/blogs'},{name:'Contact us',link:'/contact'}]
  const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'/Instagram'},{name:'Facebook',link:'/facebook'},{name:"LinkedIn",link:'/linkedin'}]
  return (
   <div className=' w-full'>
