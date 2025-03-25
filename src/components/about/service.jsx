@@ -15,7 +15,7 @@ const service = () => {
     <div className='w-[80%] flex flex-col items-center justify-center'>
         <h2 className='uppercase font-extrabold font-heading text-primary w-[80%] md:w-[60%] text-[25px] md:text-[45px] text-center'>Why Choose
         Ocean Star</h2>
-        <div className='flex flex-col md:grid md:grid-cols-2  lg:grid-cols-3 w-full'> 
+        <div className='flex flex-col md:grid md:grid-cols-2  lg:grid-cols-3 w-full xl:mb-[44px] lg:mb-[44px]'> 
     {box.map((elem,index)=>{
         return <div key={index} className='flex flex-col justify-center items-center h-[200px] md:h-[230px] w-full'>
         <div className='flex items-center justify-center w-full'><Image src={elem.image} height={45} width={45} /></div>
