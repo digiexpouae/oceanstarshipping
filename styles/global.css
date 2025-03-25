@@ -38,6 +38,9 @@ body{
   .btn {
       @apply bg-[#161647] text-white text-[12px] md:text-[18px] h-[25px] w-[80px] md:h-[40px] md:w-[110px] text-center flex items-center justify-center cursor-pointer;
     }
+    .btn-banner {
+      @apply bg-[#161647] text-white text-[10px] mt-[10px] md:text-[18px] h-[15px] w-[70px] md:h-[40px] md:w-[120px] text-center flex items-center justify-center cursor-pointer font-light;
+    }
   
     .btn:hover {
       @apply opacity-75;
