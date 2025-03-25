@@ -27,7 +27,7 @@ const blogs = ({Homepage,searchvalue}) => {
  
   return (
     <>
-    <div className='h-[200]  flex flex-col lg:grid lg:grid-cols-3 place-items-center'>
+    <div className='flex flex-col lg:grid lg:grid-cols-3 place-items-center'>
     {filteredData.map((elem,index) => (
       <div key={index}>
         <div className='flex flex-col bg-primary w-[250px] h-[282px] md:w-[300px] md:h-[390px] text-white mb-4'>
