@@ -8,6 +8,7 @@ import Slider from '../../common/slider'
 import Bannertwo from '../../common/bannertwo'
 import Header from '../../layout/header/header'
 import Feature from '../../common/feature'
+import { projectId } from '@/sanity/env'
 const index = () => {
   return (
   <>

@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/layout/header/header';
 import Footer from '@/layout/footer/footer';
-// import { sanityClient } from '';
+import { createClient } from 'next-sanity';
 import Router, { useRouter } from 'next/router';
+import {projectId,dataset,apiVersion,token} from '../sanity/env'
+
+ const sanityClient = createClient({
+  //  projectId:'6kvdqvro',// Replace with actual Project ID
+  //  dataset:'production', // Example: 'production'
+  // apiVersion:'2025-03-12',
+  projectId,dataset,apiVersion,
+  useCdn: false,
+  token
+});
 const Leads = () => {
   const router=useRouter()
   const [leads, setLeads] = useState([]);
@@ -28,8 +38,8 @@ const Leads = () => {
  
  
   useEffect(() => {
-    sanityClient
-      .fetch('*[_type == "formSubmission"]| order(_createdAt desc) {_id,name,email,phonenumber,message}')
+  sanityClient
+  .fetch('*[_type == "formSubmission"]| order(_createdAt desc) {_id,name,email,phonenumber,message}')
       .then(setLeads)
       .catch(console.error);
   }, []);
