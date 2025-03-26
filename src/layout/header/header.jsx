@@ -19,6 +19,10 @@ const router =useRouter();
 
   const [open, setopen] = useState(false)
   const [showMenu, setShowMenu] = useState(false);
+  const [mount, setmount] = useState(false)
+  useEffect(()=>{
+setmount(true)
+  },[])
   const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'/brands'},{name:'Blogs',link:"/blogs"} ]
   return (
 <div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-6 bg-white">
@@ -26,9 +30,10 @@ const router =useRouter();
         width={100} height={80}
         className=" object-cover"/></Link>
         <div className='md:hidden relative'>
-        <a className='shadow h-[45px] w-[45px] flex items-center justify-center rounded-full cursor-pointer bg-white
+        { mount &&
+        <button className='shadow h-[45px] w-[45px] flex items-center justify-center rounded-full cursor-pointer bg-white
          ' onClick={()=>{(setopen(!open))}}><FontAwesomeIcon icon={faBars} className="text-xl" />
-        </a>
+        </button>}
       {/* mobile nav */}
         <div className={`fixed h-full w-3/4 duration-300 ease-in-out flex flex-col pt-14 px-10 items-center leading-16  bg-[#F6F6F6] right-[-40px] top-0 bottom-0 z-50   ${open ? "block" : "translate-x-[525px]"}`}>
         <a className='absolute h-[35px] w-[35px] bg-white left-[20px] top-[10px] flex justify-center items-center text-xl bold' onClick={()=>{(setopen(false))}}> <FontAwesomeIcon icon={faXmark} /></a>
