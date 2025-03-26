@@ -40,14 +40,10 @@ const footer = () => {
      <div className='h-[84px] w-full bg-primary flex items-center justify-between text-white text-bold px-[20px]'>
   <div className='text-[20px]'>Copyright &copy; {new Date().getFullYear()}</div>
       <div className='flex justify-between h-[30px] w-[158px]'>
-    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='https://www.facebook.com/profile.php?id=61568623154633'
-    target="_blank"
-    rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} className="text-primary" />  </Link> </div>
+    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faFacebookF} className="text-primary" />  </Link> </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faLinkedinIn} className="text-primary" /> </Link>   </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faYoutube} className="text-primary" />    </Link>   </div>
-    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='https://www.instagram.com/ocean_star_l.l.c/following/
-' target="_blank"
-rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} className="text-primary" />  </Link>  </div>
+    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faInstagram} className="text-primary" />  </Link>  </div>
           </div>
         </div>
 </div>
