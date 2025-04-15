@@ -9,7 +9,7 @@ import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from "@fortawesome/
 
 const footer = () => {
     const nav=[{name:'Home',link:'/'},{name:'About us',link:'/about'},{name:'Brands',link:'/brands'},{name:'Blogs',link:'/blogs'},{name:'Contact us',link:'/contact'}]
- const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'/Instagram'},{name:'Facebook',link:'/facebook'},{name:"LinkedIn",link:'/linkedin'}]
+ const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'https://www.instagram.com/ocean_star_l.l.c/following/'},{name:'Facebook',link:'https://www.facebook.com/profile.php?id=61568623154633'},{name:"LinkedIn",link:'/'}]
  return (
   <div className=' w-full'>
  <div className="md:flex w-full  justify-between px-4 md:px-15 py-15  bg-[url('/assets/Group%2071.png')] bg-[#F6F6F6] bg-no-repeat" style={{ backgroundPosition: '-84px center' }}>  
@@ -40,10 +40,10 @@ const footer = () => {
      <div className='h-[84px] w-full bg-primary flex items-center justify-between text-white text-bold px-[20px]'>
   <div className='text-[20px]'>Copyright &copy; {new Date().getFullYear()}</div>
       <div className='flex justify-between h-[30px] w-[158px]'>
-    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='https://www.facebook.com/profile.php?id=61568623154633'><FontAwesomeIcon icon={faFacebookF} className="text-primary" />  </Link> </div>
+    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faFacebookF} className="text-primary" />  </Link> </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faLinkedinIn} className="text-primary" /> </Link>   </div>
     <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faYoutube} className="text-primary" />    </Link>   </div>
-    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='https://www.instagram.com/ocean_star_l.l.c/following/'><FontAwesomeIcon icon={faInstagram} className="text-primary" />  </Link>  </div>
+    <div className='w-[30px] h-[30px] bg-white text-center cursor-pointer flex items-center justify-center'><Link href='/'><FontAwesomeIcon icon={faInstagram} className="text-primary" />  </Link>  </div>
           </div>
         </div>
 </div>
