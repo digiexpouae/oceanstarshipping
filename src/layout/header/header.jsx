@@ -25,7 +25,7 @@ setmount(true)
   },[])
   const nav=[{name:'Home',link:"/"},{name:'About us',link:"/about"},{name:'Brands',link:'/brands'},{name:'Blogs',link:"/blogs"} ]
   return (
-<div className="flex !justify-between w-full items-center md:px-18 h-[78px] px-6 bg-white">
+<div className="flex !justify-between w-full items-center md:px-10 lg:px-18  h-[78px] px-6 bg-white">
 <Link href='/'><Image src={logo}   alt="logo"
         width={100} height={80}
         className=" object-cover"/></Link>

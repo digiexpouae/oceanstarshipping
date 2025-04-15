@@ -13,7 +13,7 @@ const index = () => {
   return (
   <>
         <Header />
-  <div className='flex flex-col justify-between gap-15'>
+  <div className='flex flex-col justify-between gap-5 md:gap-15'>
 
    <Herobanner />
    <Slider />

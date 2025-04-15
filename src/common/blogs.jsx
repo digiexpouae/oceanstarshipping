@@ -27,9 +27,10 @@ const blogs = ({Homepage,searchvalue}) => {
  
   return (
     <>
-    <div className='flex flex-col lg:grid lg:grid-cols-3 place-items-center'>
+    <div className=' flex  flex-col items-center justify-center  md:grid md:grid-cols-2 md:gap-y-[20px] md:mb-[30] lg:grid-cols-3 lg:gap-x-[5px]  place-items-center'>
     {filteredData.map((elem,index) => (
-      <div key={index}>
+      <div key={index}         className={`${index === elem.length - 1 ? 'md:ml-0 md:mr-auto' : ''}`}
+>
         <div className='flex flex-col bg-primary w-[250px] h-[282px] md:w-[300px] md:h-[390px] text-white mb-4'>
           <div className='w-[250px] h-[100px] md:w-full md:h-[160px] relative'>
             <Image src={urlFor(elem.imageUrl)} layout='fill' objectFit='cover' />
