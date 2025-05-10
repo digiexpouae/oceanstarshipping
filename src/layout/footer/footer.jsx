@@ -9,7 +9,7 @@ import { faFacebookF, faLinkedinIn, faYoutube, faInstagram } from "@fortawesome/
 
 const footer = () => {
     const nav=[{name:'Home',link:'/'},{name:'About us',link:'/about'},{name:'Brands',link:'/brands'},{name:'Blogs',link:'/blogs'},{name:'Contact us',link:'/contact'}]
- const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'/Instagram'},{name:'Facebook',link:'/facebook'},{name:"LinkedIn",link:'/linkedin'}]
+ const social =[{name:'Twitter',link:'/'},{name:'Instagram',link:'https://www.instagram.com/ocean_star_l.l.c/following/'},{name:'Facebook',link:'https://www.facebook.com/profile.php?id=61568623154633'},{name:"LinkedIn",link:'/'}]
  return (
   <div className=' w-full'>
  <div className="md:flex w-full  justify-between px-4 md:px-15 py-15  bg-[url('/assets/Group%2071.png')] bg-[#F6F6F6] bg-no-repeat" style={{ backgroundPosition: '-84px center' }}>  

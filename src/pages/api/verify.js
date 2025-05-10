@@ -15,4 +15,4 @@ try{
 
 }
 }
-export default verify
+export default verify;
